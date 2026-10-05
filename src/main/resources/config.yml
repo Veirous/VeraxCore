@@ -1,0 +1,363 @@
+# ==============================================================================
+#                             VERAX CORE CONFIG
+# ==============================================================================
+
+# Set to false to disable verbose console logs. (Developer mode: true/false)
+debug: false
+
+# Update Checker: Automatically check and notify on console and for staff when a new version is released on SpigotMC
+check-updates: true
+
+# ------------------------------------------------------------------------------
+# 🌐 LANGUAGE SETTINGS
+# Available: tr (Turkish), en / eng (English), de / almanca (German)
+# Language files are located in plugins/VeraxCore/lang/ folder.
+# ------------------------------------------------------------------------------
+lang: "tr"
+
+# ------------------------------------------------------------------------------
+# 🗄️ DATABASE SETTINGS
+# Storage type: SQLITE (local file) or MYSQL (remote server)
+# ------------------------------------------------------------------------------
+storage-type: SQLITE
+
+# MySQL settings — only used when storage-type: MYSQL is selected
+mysql:
+  host: "localhost"
+  port: 3306
+  database: "veraxcore"
+  username: "root"
+  password: ""
+
+# ------------------------------------------------------------------------------
+# 🔄 REDIS MULTI-SERVER SYNC (DRAFT / TASLAK)
+# Gelecekte Bungee/Velocity ağlarında sunucular arası /ys, /bakım ve /rapor
+# senkronizasyonu için taslak olarak bırakılmıştır (drafts/redis/ dizinine bakın).
+# ------------------------------------------------------------------------------
+# redis:
+#   enabled: false
+#   host: "127.0.0.1"
+#   port: 6379
+#   password: ""
+#   ssl: false
+#   timeout: 2000
+#   server-id: "survival-1"
+
+# ------------------------------------------------------------------------------
+# 🧩 MODULE MANAGEMENT (ENABLE / DISABLE)
+# ------------------------------------------------------------------------------
+modules:
+  trade: true   # sends logs of players entering trades
+  staff-time: true   # checks and logs staff activity time
+  staff-chat: true   # toggles staff chat
+  report: true   # player reporting system
+  spawn: true   # spawn system
+  chat: true   # chat control system
+  announcement: true   # announcement system
+  verification: true   # verification system
+  trash: true   # trash bin system
+  auto-announcement: true   # auto announcement system
+  pv: true   # player vault system
+  word-actions: true   # automatic word action system
+  maintenance: true   # server maintenance mode system
+  auto-restart: true   # automatic server restart system
+
+# ------------------------------------------------------------------------------
+# 🔗 DISCORD WEBHOOK URLS
+# ------------------------------------------------------------------------------
+webhook-url: "YOUR_WEBHOOK_URL_HERE" # webhook for staff activity logs
+chat-log-webhook-url: "YOUR_CHAT_LOG_WEBHOOK_URL_HERE" # webhook for chat management logs
+report-webhook-url: "YOUR_REPORT_WEBHOOK_URL_HERE" # webhook for report logs
+trade-webhook-url: "YOUR_TRADE_WEBHOOK_URL_HERE" # webhook for trade logs
+verification-webhook-url: "YOUR_VERIFICATION_WEBHOOK_URL_HERE" # webhook for verification logs
+
+target-seconds: 7200 # staff activity target in seconds (e.g. 7200 seconds = 2 hours)
+timezone: "Europe/Istanbul"
+
+# ------------------------------------------------------------------------------
+# 🏷️ MAIN PREFIX (Fallback)
+# ------------------------------------------------------------------------------
+prefix: "&#1B4FFFV&#1B58FFe&#1B61FFr&#1B6AFFa&#1B73FFx&#1B7DFFC&#1B86FFo&#1B98FFr&#1BA1FFe &8»"
+
+settings:
+  cooldown-time: 2  # chat cooldown in seconds
+  trade-cooldown: 300  # trade cooldown in seconds (300 seconds = 5 minutes)
+  trade-global-cooldown: 30  # global cooldown before another player can create a trade (30 seconds)
+  report-cooldown: 60  # cooldown in seconds before a player can send another report (60 seconds)
+
+allowed-ranks: # activity target and commands permissions ranks
+  - "helper"
+  - "owner"
+  - "admin"
+
+# ==============================================================================
+#                       📡 DISCORD EMBED LOG SETTINGS
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 💬 Discord Chat Management Log Embed Settings
+# ------------------------------------------------------------------------------
+chat-log-settings:
+  title: "🛡️ Chat Management Log"
+  description: "**Staff:** {player}\n**Action:** {action}"
+  color: "#1B4FFF"
+  footer: "VeraxCore • Chat Log System"
+
+# ------------------------------------------------------------------------------
+# 🚨 Discord Report Log Embed Settings
+# ------------------------------------------------------------------------------
+report-log-settings:
+  title: "🚨 New Player Report"
+  color: "#FF0000"
+  description: "**Reporter:** `{reporter}`\n**Reported:** `{reported}`\n**Reason:** {reason}"
+  footer: "VeraxCore • Report System"
+  thumbnail-url: "https://minotar.net/helm/{reporter}/100.png"
+
+# ------------------------------------------------------------------------------
+# ⚖️ Discord Trade Log Embed Settings
+# ------------------------------------------------------------------------------
+trade-log-settings:
+  outer-content: "%player% is trading!"
+  author-name: "%player%"
+  author-icon: "https://mc-heads.net/avatar/%player%"
+  field-title: "**Message:**"
+  color: "#1B4FFF" # Embed Left Line Color (Hex Blue)
+  footer-text: "VeraxCore"
+  footer-icon: "" # Optional logo URL
+
+# ------------------------------------------------------------------------------
+# 🛡️ Discord Security Verification Log Embed Settings
+# ------------------------------------------------------------------------------
+verification-system:
+  # Session validity timeout in hours (default: 6 hours).
+  # If a verified player rejoins from the same IP within this timeframe, verification is skipped.
+  # If their IP address changes, they will always be required to re-verify.
+  session-timeout-hours: 6
+
+  # Time limit in seconds for entering the verification code before being kicked (default: 120, 0 = disabled)
+  timeout-seconds: 120
+
+  # Maximum wrong code attempts allowed before being kicked (default: 3, 0 = unlimited)
+  max-attempts: 3
+
+  # BossBar countdown settings (Title text is configured in lang/<lang>.yml -> messages.verification-bossbar)
+  bossbar:
+    enabled: true
+    color: "BLUE"     # RED, BLUE, GREEN, YELLOW, PURPLE, PINK, WHITE
+    style: "SEGMENTED_12"   # SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+
+  # On-screen Title & Subtitle animation settings (Titles are configured in lang/<lang>.yml)
+  title:
+    enabled: true
+    fade-in: 10
+    stay: 80
+    fade-out: 20
+
+  accounts:
+    - "Veirous"
+  log-settings:
+    title: "🛡️ Security Verification Request"
+    description: "%player% Joined the Game\nIP Address: ``%ip%``\nTo pass verification type:\n ``/verify %code%``"
+    color: "#FF0000"
+    footer: "VeraxCore • Security System"
+  success-log-settings:
+    title: "✅ Security Verification Successful"
+    description: "%player% passed verification by entering the correct code!\nIP Address: ``%ip%``"
+    color: "#00FF00"
+    footer: "VeraxCore • Security System"
+
+# ------------------------------------------------------------------------------
+# 📊 Discord Embed Activity Report Settings
+# ------------------------------------------------------------------------------
+embed:
+  title: "📅 {type} Staff Activity Report"
+  format: "{rank}. `{staff}`: {time} {status}"
+  status:
+    passed: "✅"
+    failed: "❌"
+  color: "#1B4FFF"
+  footer: "VeraxCore • {type} Report • {time}"
+  # Date/time lines in embed (if left empty, that line will not be sent)
+  date-range-label: "**Date Range:** `%time%`"   # Daily e.g. 20/07/2026 | Weekly/Monthly/Total e.g. 20/07/2026 - 26/07/2026
+  report-time-label: ""        # If left empty, time line will not be shown in embed description (written in footer)
+
+# ==============================================================================
+#                         🎮 IN-GAME SYSTEM SETTINGS
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 🗑️ Trash Bin Settings
+# ------------------------------------------------------------------------------
+trash-system:
+  slots: 36
+  sound: "BLOCK_CHEST_OPEN"
+  permission: "" # Leave empty for public access. Special permission: "veraxcore.trash"
+
+# ------------------------------------------------------------------------------
+# 📦 Player Vault (PV) Settings
+# ------------------------------------------------------------------------------
+pv-system:
+  default-amount: 1
+  default-slots: 27
+
+# ------------------------------------------------------------------------------
+# ⚖️ Trade Menu Slot Items & Actions
+# ------------------------------------------------------------------------------
+trade-visuals:
+  bossbar-color: "BLUE"
+  bossbar-style: "SEGMENTED_12"
+  bossbar-duration-seconds: 10
+  menu-refresh-ticks: 20
+  empty-slot-item: MAP
+  border-item: BLACK_STAINED_GLASS_PANE
+
+# Actions executed when clicking a Player Head in Trade Menu
+trade-head-click-actions:
+  message: ""
+  console-commands: []
+  player-commands:
+    - "trade {owner}"
+
+# Trade Notification Toggle Settings
+# When a player disables trade notifications (/trade off), choose which elements are muted:
+trade-toggle-settings:
+  disable-chat: true      # Don't show chat broadcast to players who turned trade off
+  disable-sound: true     # Don't play bell sound to players who turned trade off
+  disable-title: true     # Don't send title / subtitle to players who turned trade off
+  disable-bossbar: true   # Don't show bossbar to players who turned trade off
+
+# ------------------------------------------------------------------------------
+# 📍 Spawn & Teleport Settings
+# ------------------------------------------------------------------------------
+teleport-delay: 3
+
+sounds:
+  success: "ENTITY_PLAYER_LEVELUP"
+  cancel: "ENTITY_VILLAGER_NO"
+  countdown: "BLOCK_NOTE_BLOCK_PLING"
+  trade-bell: "BLOCK_BELL_USE"
+
+spawn-location:
+  world: ""
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+first-spawn-location:
+  world: ""
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+# ------------------------------------------------------------------------------
+# 📢 Announcement Title Timing Settings
+# ------------------------------------------------------------------------------
+announcement-settings:
+  fade-in: 500
+  stay: 3500
+  fade-out: 1000
+
+# ------------------------------------------------------------------------------
+# 👮 Staff Chat Sound Settings
+# ------------------------------------------------------------------------------
+staff-chat:
+  sound: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  volume: 1.0
+  pitch: 1.2
+  log-to-console: true # Logs staff chat messages to the server console
+
+# ------------------------------------------------------------------------------
+# 🔤 Automatic Word Actions
+# ------------------------------------------------------------------------------
+word-actions:
+  enabled: true
+  example_action:
+    word: "mal"
+    cancel-chat: false  # cancels sending message to chat if true
+    actions:
+      message: "%prefix% &cInappropriate word detected!"
+      console-commands: 
+      - "mute %player% 30m Inappropriate Word Use"
+      player-commands: []
+
+# ------------------------------------------------------------------------------
+# 📣 AUTOMATIC ANNOUNCEMENT (AUTO ANNOUNCEMENT) SETTINGS
+# ------------------------------------------------------------------------------
+auto-announcement:
+  announcements:
+    discord-announcement:
+      enabled: true
+      interval-seconds: 300 # Broadcast interval in seconds (e.g. 120 seconds = 2 minutes)
+      sound-enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      message: |
+        &8________________________________________
+        &7
+        &#1B4FFF[✔] &#1BA1FF&lDISCORD SERVER
+        &7Join our Discord community for giveaways, events, and support!
+        &7
+        &#1B4FFFTo Join: &#1BA1FFdiscord.gg/yourserver
+        &8________________________________________
+    website-announcement:
+      enabled: true
+      interval-seconds: 300 # Broadcast interval in seconds (e.g. 300 seconds = 5 minutes)
+      sound-enabled: true
+      sound: "ENTITY_PLAYER_LEVELUP"
+      message: |
+        &8________________________________________
+        &7
+        &#1B4FFF[✔] &#1BA1FF&lWEBSITE & STORE
+        &7Visit our website for VIP memberships and credit purchases!
+        &7
+        &#1B4FFFOur Website: &#1BA1FFwww.yourserver.com
+        &8________________________________________
+
+# ------------------------------------------------------------------------------
+# 📈 AUTOMATIC LOG SENDING SETTINGS
+# ------------------------------------------------------------------------------
+auto-log:
+  daily:
+    enabled: true   # Send daily log every night at 00:00
+  weekly:
+    enabled: true   # Send weekly log every Monday at 00:00
+    reset: true   # Reset weekly times after sending
+  monthly:
+    enabled: true   # Send monthly log on 1st of every month at 00:00
+    reset: true   # Reset monthly times after sending
+
+# ------------------------------------------------------------------------------
+# 🔧 SERVER MAINTENANCE MODE SETTINGS
+# ------------------------------------------------------------------------------
+maintenance:
+  enabled: false
+  start-time: 0
+  change-motd: false # Change server MOTD during maintenance mode
+  allowed-ranks: # Ranks allowed to stay online / join during maintenance
+    - "owner"
+    - "admin"
+  bossbar:
+    color: "RED" # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+    style: "SEGMENTED_12" # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+  active-bossbar:
+    color: "RED"
+    style: "SEGMENTED_12"
+
+# ------------------------------------------------------------------------------
+# 🔄 AUTOMATIC SERVER RESTART (AUTO RESTART) SETTINGS
+# Server restart times are triggered automatically based on the 'timezone' setting above.
+# Requires no in-game commands; runs completely automated in the background.
+# ------------------------------------------------------------------------------
+auto-restart:
+  enabled: true
+  times:
+    - "04:00"
+    - "16:00"
+  restart-command: "restart" # Command executed from console upon restart (e.g. 'restart' or 'stop')
+  bossbar:
+    lead-time: "30m" # How long before restart the countdown BossBar opens (e.g. 30m, 1h, 45m, 1800s)
+    color: "YELLOW" # RED, BLUE, GREEN, YELLOW, PURPLE, PINK, WHITE
+    style: "SEGMENTED_12" # PROGRESS, NOTCHED_6, NOTCHED_10, NOTCHED_12, NOTCHED_20, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20

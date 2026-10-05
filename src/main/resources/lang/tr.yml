@@ -1,0 +1,263 @@
+# ==============================================================================
+#                      VERAX CORE - TÜRKÇE DİL DOSYASI (TR)
+# ==============================================================================
+
+# ==============================================================================
+#                         💬 GENEL SİSTEM MESAJLARI
+# ==============================================================================
+messages:
+  # ----------------------------------------------------------------------------
+  # ⚙️ TEMEL KOMUT VE YETKİ BİLDİRİMLERİ
+  # ----------------------------------------------------------------------------
+  no-permission: "%prefix% &cBu komutu kullanmak için yetkiniz yok!"
+  reload-success: "%prefix% &aEklenti ve dil yapılandırması başarıyla yenilendi!"
+  module-disabled: "%prefix% &cBu özellik şu anda devre dışı!"
+  only-players: "%prefix% &cBu komutu sadece oyundaki oyuncular kullanabilir!"
+  player-not-found: "%prefix% &cBelirtilen oyuncu bulunamadı veya oyunda değil!"
+
+  # ----------------------------------------------------------------------------
+  # 📦 PLAYER VAULT (PV) ÖZEL DEPO MESAJLARI
+  # ----------------------------------------------------------------------------
+  pv-opened: "%prefix% &fKasa &a#%vault_no% &façıldı."
+  pv-opened-admin: "%prefix% &a%player% &fadlı oyuncunun &a#%vault_no% &fnumaralı kasası açıldı."
+  pv-locked-error: "%prefix% &cBu kasaya erişiminiz yok! Kasa açmak için VIP veya Kasa Bileti edinmelisiniz."
+  pv-no-permission: "%prefix% &cBu komutu kullanmak için yetkiniz yok!"
+  pv-player-not-found: "%prefix% &cBelirtilen oyuncu bulunamadı!"
+  pv-invalid-args: "%prefix% &cKullanım: /pvadmin show <oyuncu> [kasa_no]"
+
+  # ----------------------------------------------------------------------------
+  # 📢 SOHBET YÖNETİMİ & DUYURU MESAJLARI
+  # ----------------------------------------------------------------------------
+  chat-closed-error: "%prefix% &cSohbet şu anda kilitli!"
+  spam-warning: "%prefix% &fSpam yapamazsınız! Lütfen &#1B4FFF%remaining% &fsaniye bekleyin."
+  chat-already-open: "%prefix% &fSohbet zaten &#1BA1FFaçık."
+  chat-already-closed: "%prefix% &fSohbet zaten &ckapalı."
+  chat-opened-broadcast: "%prefix% &fSohbet &a{player} &ftarafından açıldı."
+  chat-closed-broadcast: "%prefix% &fSohbet &c{player} &ftarafından kilitlendi."
+  chat-cleared-broadcast: "%prefix% &fSohbet &a{player} &ftarafından temizlendi."
+  announcement-usage: "%prefix% &cKullanım: &#1BA1FF/duyuru <mesaj>"
+  announcement-sent: "%prefix% &aDuyuru başarıyla ekrana gönderildi."
+  auto-announcement-toggle-on: "%prefix% &aOtomatik duyurular başarıyla açıldı."
+  auto-announcement-toggle-off: "%prefix% &cOtomatik duyurular kapatıldı."
+  auto-announcement-usage: "%prefix% &cKullanım: &#1BA1FF/otoduyuru <aç/kapat | on/off>"
+
+  # ----------------------------------------------------------------------------
+  # 📍 SPAWN & IŞINLANMA MESAJLARI
+  # ----------------------------------------------------------------------------
+  spawn-not-set: "%prefix% &cSpawn noktası henüz ayarlanmamış!"
+  spawn-set-success: "%prefix% &aSpawn noktası başarıyla bulunduğunuz konuma ayarlandı!"
+  first-spawn-set-success: "%prefix% &aİlk giriş ve yeniden doğma noktası başarıyla bulunduğunuz konuma ayarlandı!"
+  spawn-deleted-success: "%prefix% &aSpawn noktası başarıyla silindi!"
+  first-spawn-deleted-success: "%prefix% &aİlk giriş ve yeniden doğma noktası başarıyla silindi!"
+
+  # ----------------------------------------------------------------------------
+  # 🚨 OYUNCU RAPOR SİSTEMİ MESAJLARI
+  # ----------------------------------------------------------------------------
+  report-usage: "%prefix% &cKullanım: &#1BA1FF/rapor <oyuncu> <sebep>"
+  report-self: "%prefix% &cKendinizi raporlayamazsınız!"
+  report-success: "%prefix% &fRaporunuz &abaşarıyla &fyetkililere iletildi."
+  report-cooldown-warning: "%prefix% &cTekrar rapor göndermek için &e%remaining% &csaniye beklemelisiniz!"
+  report-staff-notification: "&8[&cRapor&8] &#1BA1FF{reporter} &f-> &#FF3333{reported}&f: &e{reason}"
+
+  # ----------------------------------------------------------------------------
+  # 🛡️ GÜVENLİK & GİRİŞ DOĞRULAMA (2FA) MESAJLARI
+  # ----------------------------------------------------------------------------
+  verification-required: "%prefix% &fŞu anda doğrulamadasınız. Lütfen Discord üzerinden gönderilen &#1B4FFFkodu &fgirin. &8(&c%remaining_attempts% Hak&8)"
+  verification-reminder: "%prefix% &fŞu anda doğrulamadasınız. Lütfen Discord üzerinden gönderilen &#1B4FFFkodu &fgirin. &8(&c%remaining_attempts% Hak &8| &#FFAA00%seconds%s&8)"
+  verification-not-needed: "%prefix% &aBekleyen bir giriş doğrulamanız yok veya zaten doğrulandınız."
+  verification-usage: "%prefix% &cKullanım: &#1BA1FF/doğrula <kod>"
+  verification-success: "%prefix% &fDoğrulama &aBaşarıyla &fGeçildi!"
+  verification-failed: "%prefix% &cGeçersiz Kod! Kalan deneme hakkınız: &#FFAA00%remaining_attempts%/%max_attempts%"
+  verification-bossbar: "&#FF0000🛡️ Doğrulama Süresi: &#FFAA00%seconds%s &8| &7Kalan Hak: &#FF5555%remaining_attempts%/%max_attempts%"
+  verification-title: "&#1B4FFF&lDOĞRULAMA GEREKİYOR"
+  verification-subtitle: "&fLütfen Discord kodunu girin: &#1BA1FF/doğrula <kod> &8(&e%remaining_attempts% Hak&8)"
+  verification-wrong-title: "&#FF0000&lHATALI KOD!"
+  verification-wrong-subtitle: "&cKalan deneme hakkınız: &#FFAA00%remaining_attempts%/%max_attempts%"
+  verification-success-title: "&#00FF00&lDOĞRULANDI!"
+  verification-success-subtitle: "&aGiriş başarıyla onaylandı. İyi oyunlar!"
+  verification-timeout-kick: "&#FF0000&lDOĞRULAMA SÜRESİ DOLDU!\n&7Kodu belirtilen süre içinde girmediniz.\n&fLütfen Discord kodunuzu kontrol edip tekrar bağlanın."
+  verification-max-attempts-kick: "&#FF0000&lÇOK FAZLA HATALI DENEME!\n&7Maksimum hatalı kod deneme limitini aştınız.\n&fLütfen Discord kodunuzu kontrol edip tekrar bağlanın."
+
+  # ----------------------------------------------------------------------------
+  # 🗑️ ÇÖP KUTUSU (TRASH) MESAJLARI
+  # ----------------------------------------------------------------------------
+  trash-opened: "%prefix% &aÇöp kutusu açıldı. İçine bıraktığınız eşyalar silinecektir!"
+
+  # ----------------------------------------------------------------------------
+  # ⚖️ TİCARET (TRADE) SİSTEMİ MESAJLARI
+  # ----------------------------------------------------------------------------
+  trade-start: "%prefix% &fŞu anda &#1B4FFFticaret &fmesajınızı yazıyorsunuz, iptal etmek için &c\"iptal\" &fyazın."
+  trade-cancel: "%prefix% &fTicaret mesajı isteğiniz &ciptal edildi."
+  trade-cooldown-msg: "%prefix% &cTekrar ticaret ilanı vermek için &#1BA1FF%remaining% &csaniye beklemelisiniz."
+  trade-global-cooldown-msg: "%prefix% &cYakın zamanda başka bir oyuncu ilan verdi! Lütfen &#1BA1FF%remaining% &csaniye bekleyin."
+  trade-success: "%prefix% &aTicaret mesajı başarıyla yayınlandı!"
+  trade-max-one: "%prefix% &cAynı anda sadece 1 aktif ticaret mesajınız olabilir."
+  trade-slot-taken: "%prefix% &cBu ticaret slotu dolu."
+  trade-expired: "%prefix% &cTicaret ilanınızın süresi doldu."
+  trade-toggle-on: "%prefix% &aTicaret bildirimleri başarıyla açıldı."
+  trade-toggle-off: "%prefix% &cTicaret bildirimleri kapatıldı."
+  trade-disabled-self: "%prefix% &cTicaret modunuz kapalı! Menüyü açmak ve ticaret yapmak için &#1BA1FF/ticaret on &cyazmalısınız."
+  
+  # Oyun İçi Sohbet Ticaret Duyuru Formatı
+  trade-broadcast: |
+    &8________________________________________
+    &7
+    &#1B4FFF&lTicaret Duyurusu
+    &7
+    &#1B4FFF%player% &7Ticaret Yapıyor! &7/takas %player%
+    &7
+    &#1B4FFFMesaj: &7%message%
+    &8________________________________________
+
+# ==============================================================================
+# 🗑️ ÇÖP KUTUSU (TRASH) MENÜ AYARLARI
+# ==============================================================================
+trash-system:
+  title: "&8Çöp Kutusu"
+
+# ==============================================================================
+# 📦 PLAYER VAULT (PV) MENÜ VE EŞYA AYARLARI
+# ==============================================================================
+pv-system:
+  selection-menu-title: "&8Kasalarınız"
+  vault-menu-title: "&8Kasa #%vault_no%"
+  admin-selection-menu-title: "&8%player% - Kasaları"
+  admin-vault-menu-title: "&8%player% - Kasa #%vault_no%"
+
+  unlocked-item:
+    name: "&fKasa &#1ba1ff#%vault_no%"
+    lore:
+      - "&7• Eşyalarınızı saklayabileceğiniz"
+      - "&7• kişisel özel bir kasa."
+      - ""
+      - "&#00FF00Açmak için tıklayın."
+
+  locked-item:
+    name: "&fKasa &#ff0000(Kilitli)"
+    lore:
+      - "&7• Eşyalarınızı saklayabileceğiniz"
+      - "&7• kişisel özel bir kasa."
+      - ""
+      - "&#ff0000Açmak için VIP gereklidir"
+
+# ==============================================================================
+# ⚖️ TİCARET GÖRSEL VE ARAYÜZ AYARLARI
+# ==============================================================================
+trade-visuals:
+  menu-title: "&8Ticaret Menüsü"
+  head-title: "&#1BA1FF%player% &fTicaret Yapıyor &#1B4FFF/ticaret"
+  title: ""
+  subtitle: "&#1BA1FF%player% &fTicaret Yapıyor &#1B4FFF/ticaret"
+  bossbar-text: "&#1BA1FF%owner% &fTicaret Yapıyor! &#1B4FFF/ticaret"
+  trade-lore:
+    - "&8"
+    - "&#1B4FFFMesaj: &#1BA1FF%message%"
+    - ""
+    - "&fKalan Süre: &#1BA1FF%remaining_time%"
+  empty-slot-title: "&#1BA1FFİlan Ekle"
+  empty-slot-lore:
+    - "&7Yeni bir ticaret ilanı oluşturmak"
+    - "&7için buraya tıklayın."
+    - ""
+    - "&#00FF00İlan Eklemek İçin Tıkla."
+  border-title: " "
+  border-lore: []
+
+# ==============================================================================
+# 📍 SPAWN BAŞLIK VE IŞINLANMA MESAJLARI
+# ==============================================================================
+spawn-title-settings:
+  title-moving: "&#1B4FFFHareket Etmeyin!"
+  subtitle-teleporting: "&#ff0000Lütfen &#1ba1ff%remaining_seconds% &fSaniye Bekleyin"
+
+teleport-messages:
+  teleport-cancelled: "%prefix% &fIşınlanma hareket ettiğiniz için &#ff0000İptal Edildi&f!"
+  teleport-success: "%prefix% &fIşınlanma &#00FF00Başarılı"
+
+# ==============================================================================
+# 👮 YETKİLİ AKTİFLİK VE SÜRE MESAJLARI
+# ==============================================================================
+staff-messages:
+  header: "&#1B4FFF--- &#1BA1FF{status} Durumu &#1B4FFF---"
+  list-format: "&#1BA1FF{rank}. &#1ba1ff{staff}: &F{time} {status}"
+  passed-icon: "&#00FF00✔"
+  failed-icon: "&#ff0000✘"
+  admin-no-permission: "&cBu yönetici komutunu kullanmak için yetkiniz yok!"
+  no-permission: "&cBunu yapamazsınız"
+  log-preparing: "&#1BA1FFDiscord raporu hazırlanıyor ve gönderiliyor..."
+  log-success: "&#00FF00Discord raporu başarıyla gönderildi!"
+
+# ==============================================================================
+# 💬 YETKİLİ SOHBETİ (STAFF CHAT) BİÇİMİ
+# ==============================================================================
+staff-chat:
+  format: "&#1B4FFFY&#1B58FFe&#1B61FFt&#1B6AFFk&#1B73FFi&#1B7DFFl&#1B86FFi &#1B8FFFS&#1B8FFFo&#1B98FFh&#1BA1FFb&#1BAAFFe&#1BB3FFt&8: &#1BA1FF{player} &8» &f{message}"
+  console-log-format: "[YetkiliSohbet] {player}: {message}"
+
+# ==============================================================================
+# 🚨 RAPOR DISCORD EMBED METİNLERİ
+# ==============================================================================
+report-log-settings:
+  title: "🚨 Yeni Oyuncu Raporu"
+  footer: "VeraxCore • Rapor Sistemi"
+
+# ==============================================================================
+# 📢 DUYURU BAŞLIĞI AYARLARI
+# ==============================================================================
+announcement-settings:
+  static-title: "&#1BA1FF&lDUYURU"
+
+# ==============================================================================
+# ⏳ ZAMAN BİÇİMİ ETİKETLERİ
+# ==============================================================================
+time-format:
+  day: " Gün"
+  hour: " Saat"
+  minute: " Dakika"
+  second: " Saniye"
+  zero: " 0 Dakika"
+
+# ==============================================================================
+# 📅 DÖNEM TİPİ ANAHTAR KELİMELERİ
+# ==============================================================================
+period-types:
+  daily: "günlük"
+  weekly: "haftalık"
+  monthly: "aylık"
+  total: "toplam"
+
+# ==============================================================================
+# 🔧 BAKIM MODU (MAINTENANCE) AYARLARI
+# ==============================================================================
+maintenance:
+  usage: "%prefix% &cKullanım: &#1BA1FF/bakım <on/off | start <süre>>"
+  start-usage: "%prefix% &cKullanım: &#1BA1FF/bakım start <30m | 1h | 45s>"
+  invalid-time: "%prefix% &cGeçersiz süre girdiniz! Örnek: &#1BA1FF30m&c, &#1BA1FF1h&c, &#1BA1FF45s"
+  already-active: "%prefix% &cBakım modu zaten aktif!"
+  already-disabled: "%prefix% &cBakım modu zaten kapalı!"
+  enabled-success: "%prefix% &aBakım modu başarıyla &#00FF00aktif &aedildi! Yetkisiz oyuncular oyundan atıldı."
+  disabled-success: "%prefix% &aBakım modu başarıyla &ckapatıldı &ave geri sayım sonlandırıldı."
+  countdown-started: "%prefix% &aSunucu &#1BA1FF%time% &asonra bakıma alınacaktır. Geri sayım BossBar ile başlatıldı!"
+  broadcast-started: "%prefix% &cSunucu bakıma alınmıştır! İyi oyunlar."
+  bossbar-text: "&#FF3333&lBAKIM MODU &8» &fSunucu &#FF3333%remaining_time% &fiçinde bakıma alınacaktır!"
+  active-bossbar-text: "&#FF3333&lBAKIM MODU &8» &fGeçen Süre: &#FF3333%elapsed_time%"
+  motd-line-1: "&#1B4FFFV&#1B58FFe&#1B61FFr&#1B6AFFa&#1B73FFx&#1B7DFFC&#1B86FFo&#1B98FFr&#1BA1FFe &8» &#FF3333&lBAKIM MODU"
+  motd-line-2: "&7Sunucumuz şu anda bakımdadır. &8(&c/discord&8)"
+  kick-screen: |
+    &8__________________________________________________
+    
+    &#1B4FFFV&#1B58FFe&#1B61FFr&#1B6AFFa&#1B73FFx&#1B7DFFC&#1B86FFo&#1B98FFr&#1BA1FFe
+    &#FF3333&lSunucu Bakımda
+    
+    &7Sunucumuz sizlere daha kaliteli ve kesintisiz bir
+    &7oyun deneyimi sunmak amacıyla &cbakım moduna &7alınmıştır.
+    
+    &#1BA1FF✦ &fGelişmeler ve Açılış Duyurusu İçin:
+    &#1BA1FFDiscord: &fdiscord.gg/yourdiscord
+    &8__________________________________________________
+
+# ==============================================================================
+# 🔄 OTOMATİK YENİDEN BAŞLATMA (AUTO RESTART) AYARLARI
+# ==============================================================================
+auto-restart:
+  bossbar-text: "&#FFAA00&lYENİDEN BAŞLATMA &8» &fSunucu &#FFAA00%remaining_time% &fiçinde yeniden başlatılacaktır!"
