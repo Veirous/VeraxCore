@@ -171,6 +171,24 @@ veraxcore.pv.amount.<number>: Maximum number of vaults allowed (e.g. veraxcore.p
 veraxcore.pv.slot.<number>: Capacity/slots of vaults (e.g. veraxcore.pv.slot.54)
 veraxcore.maintenance: Permission to enable/disable maintenance mode (Default: OP)
 veraxcore.maintenance.bypass: Permission to join and stay online during maintenance (Default: OP)
+
+## 💸 Trade System Photos
+<img width="431" height="388" alt="Trade Menu" src="https://github.com/user-attachments/assets/af090707-504d-41fd-ad69-317d90226b46" />
+<img width="696" height="136" alt="Trade Message" src="https://github.com/user-attachments/assets/8f9ecdf1-7ac1-41de-a6bb-1c4ca09f5643" />
+
+## 🔰 Staff Chat System Photo
+<img width="503" height="93" alt="Staff Chat" src="https://github.com/user-attachments/assets/cfc9bf8f-47b6-4a41-8168-083600103093" />
+
+## 💬 Chat Management System Photos
+<img width="500" height="31" alt="Chat Open" src="https://github.com/user-attachments/assets/e7d95ce6-ce35-4587-be7b-b477af67e5e7" />
+<img width="442" height="32" alt="Chat Close" src="https://github.com/user-attachments/assets/fa497c06-3bc4-457f-9cd8-180c71ba3dcc" />
+<img width="410" height="34" alt="Chat Clear" src="https://github.com/user-attachments/assets/73b17f5c-4221-4abd-9fe8-d6978ee2b799" />
+
+## 🚧 Maintenance System Photos
+<img width="1920" height="1009" alt="Maintenance Countdown" src="https://github.com/user-attachments/assets/fddccd44-2f31-4c36-9fba-840d8a88dd0a" />
+<img width="1920" height="1009" alt="Maintenance Started" src="https://github.com/user-attachments/assets/2aaccc17-187e-4677-8964-f85e048683b0" />
+<img width="1362" height="683" alt="Maintenance Kick Screen" src="https://github.com/user-attachments/assets/785ab888-061f-4ee0-868e-b8254d97edb3" />
+
 ```
 
 ---
@@ -264,22 +282,9 @@ This project is licensed under the **[MIT License](LICENSE)**. See the [LICENSE]
   <b>Developer:</b> <a href="https://www.spigotmc.org/resources/138126/">VeraxDev</a> • <b>Version:</b> 3.5.1
 </p>
 
-## 💸 Trade System Photos
-<img width="696" height="136" alt="Trade Menu" src="https://github.com/user-attachments/assets/ad29e0de-5af4-495d-8ae7-78204f8ddd31" />
-<img width="696" height="136" alt="Trade Message" src="https://github.com/user-attachments/assets/8f9ecdf1-7ac1-41de-a6bb-1c4ca09f5643" />
 
-## 🔰 Staff Chat System Photo
-<img width="503" height="93" alt="Staff Chat" src="https://github.com/user-attachments/assets/cfc9bf8f-47b6-4a41-8168-083600103093" />
 
-## 💬 Chat Management System Photos
-<img width="500" height="31" alt="Chat Open" src="https://github.com/user-attachments/assets/e7d95ce6-ce35-4587-be7b-b477af67e5e7" />
-<img width="442" height="32" alt="Chat Close" src="https://github.com/user-attachments/assets/fa497c06-3bc4-457f-9cd8-180c71ba3dcc" />
-<img width="410" height="34" alt="Chat Clear" src="https://github.com/user-attachments/assets/73b17f5c-4221-4abd-9fe8-d6978ee2b799" />
 
-## 🚧 Maintenance System Photos
-<img width="1920" height="1009" alt="Maintenance Countdown" src="https://github.com/user-attachments/assets/9569b127-7d09-403d-9e1e-76f0705aae07" />
-<img width="1920" height="1009" alt="Maintenance Started" src="https://github.com/user-attachments/assets/9569b127-7d09-403d-9e1e-76f0705aae07" />
-<img width="1920" height="1009" alt="Maintenance Kick Screen" src="https://github.com/user-attachments/assets/9569b127-7d09-403d-9e1e-76f0705aae07" />
 
 
 
