@@ -280,7 +280,7 @@ This project is licensed under the **[MIT License](LICENSE)**. See the [LICENSE]
 ---
 
 <p align="center">
-  <b>Developer:</b> <a href="https://www.spigotmc.org/resources/138126/">VeraxDev</a> • <b>Version:</b> 3.5.1
+  <b>Developer:</b> <a href="https://www.spigotmc.org/resources/138126/">VeraxDev</a> • <b>Version:</b> 3.5.2
 </p>
 
 
