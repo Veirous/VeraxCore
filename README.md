@@ -172,6 +172,11 @@ veraxcore.pv.slot.<number>: Capacity/slots of vaults (e.g. veraxcore.pv.slot.54)
 veraxcore.maintenance: Permission to enable/disable maintenance mode (Default: OP)
 veraxcore.maintenance.bypass: Permission to join and stay online during maintenance (Default: OP)
 
+```
+
+---
+
+
 ## 💸 Trade System Photos
 <img width="431" height="388" alt="Trade Menu" src="https://github.com/user-attachments/assets/af090707-504d-41fd-ad69-317d90226b46" />
 <img width="696" height="136" alt="Trade Message" src="https://github.com/user-attachments/assets/8f9ecdf1-7ac1-41de-a6bb-1c4ca09f5643" />
@@ -188,10 +193,6 @@ veraxcore.maintenance.bypass: Permission to join and stay online during maintena
 <img width="1920" height="1009" alt="Maintenance Countdown" src="https://github.com/user-attachments/assets/fddccd44-2f31-4c36-9fba-840d8a88dd0a" />
 <img width="1920" height="1009" alt="Maintenance Started" src="https://github.com/user-attachments/assets/2aaccc17-187e-4677-8964-f85e048683b0" />
 <img width="1362" height="683" alt="Maintenance Kick Screen" src="https://github.com/user-attachments/assets/785ab888-061f-4ee0-868e-b8254d97edb3" />
-
-```
-
----
 
 ## 📦 Installation
 
@@ -267,7 +268,7 @@ To compile VeraxCore yourself, ensure you have **JDK 17** and **Apache Maven** i
 mvn clean package
 ```
 
-The compiled shaded artifact will be generated in `target/VeraxCore-3.5.1.jar`.![Uploading Maintenance Couldown.png…]()
+The compiled shaded artifact will be generated in `target/VeraxCore-3.5.1.jar`.
 
 
 ---
