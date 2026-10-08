@@ -262,3 +262,6 @@ This project is licensed under the **[MIT License](LICENSE)**. See the [LICENSE]
 <p align="center">
   <b>Developer:</b> <a href="https://www.spigotmc.org/resources/138126/">VeraxDev</a> • <b>Version:</b> 3.5.1
 </p>
+
+
+<img width="1920" height="1080" alt="2026-10-08_16 19 28" src="https://github.com/user-attachments/assets/f345ac0e-90eb-457a-9635-269b0aa0ae53" />
