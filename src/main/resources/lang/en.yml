@@ -1,0 +1,269 @@
+# ==============================================================================
+#                     VERAX CORE - ENGLISH LANGUAGE FILE (EN)
+# ==============================================================================
+
+# ==============================================================================
+#                        💬 GENERAL SYSTEM MESSAGES
+# ==============================================================================
+messages:
+  # ----------------------------------------------------------------------------
+  # ⚙️ CORE COMMAND & PERMISSION MESSAGES
+  # ----------------------------------------------------------------------------
+  no-permission: "%prefix% &cYou do not have permission to use this command!"
+  reload-success: "%prefix% &aPlugin configuration and language reloaded successfully!"
+  module-disabled: "%prefix% &cThis feature is currently disabled!"
+  only-players: "%prefix% &cOnly in-game players can use this command!"
+  player-not-found: "%prefix% &cSpecified player was not found or is offline!"
+
+  # ----------------------------------------------------------------------------
+  # 📦 PLAYER VAULT (PV) MESSAGES
+  # ----------------------------------------------------------------------------
+  pv-opened: "%prefix% &7Vault &a#%vault_no% &7opened."
+  pv-opened-admin: "%prefix% &7Vault &a#%vault_no% &7of player &a%player% &7was opened."
+  pv-locked-error: "%prefix% &cYou do not have access to this vault! You must obtain VIP or a Vault Voucher."
+  pv-no-permission: "%prefix% &cYou do not have permission to use this command!"
+  pv-player-not-found: "%prefix% &cSpecified player was not found!"
+  pv-invalid-args: "%prefix% &cUsage: /pvadmin show <player> [vault_no]"
+  pv-invalid-vault-number: "%prefix% &cVault number must be between 1 and %max%!"
+  pv-enter-valid-number: "%prefix% &cPlease enter a valid vault number (1-%max%)!"
+
+  # ----------------------------------------------------------------------------
+  # 📢 CHAT MANAGEMENT & ANNOUNCEMENT MESSAGES
+  # ----------------------------------------------------------------------------
+  chat-closed-error: "%prefix% &7Chat is currently &clocked!"
+  spam-warning: "%prefix% &7You cannot spam! Please wait &c%remaining% &7seconds."
+  chat-already-open: "%prefix% &7Chat is already &aopen."
+  chat-already-closed: "%prefix% &7Chat is already &cclosed."
+  chat-opened-broadcast: "%prefix% &7Chat was unlocked by &a{player}&7."
+  chat-closed-broadcast: "%prefix% &7Chat was locked by &c{player}&7."
+  chat-cleared-broadcast: "%prefix% &7Chat was cleared by &a{player}&7."
+  announcement-usage: "%prefix% &cUsage: &#1BA1FF/announcement or /duyuru <message>"
+  announcement-sent: "%prefix% &aAnnouncement was successfully sent to screen."
+  auto-announcement-toggle-on: "%prefix% &aAuto announcements successfully enabled."
+  auto-announcement-toggle-off: "%prefix% &cAuto announcements disabled."
+  auto-announcement-usage: "%prefix% &cUsage: &#1BA1FF/autoannouncement <on/off>"
+
+  # ----------------------------------------------------------------------------
+  # 📍 SPAWN & TELEPORTATION MESSAGES
+  # ----------------------------------------------------------------------------
+  spawn-not-set: "%prefix% &cSpawn point has not been set yet!"
+  spawn-set-success: "%prefix% &aSpawn point successfully set to your current location!"
+  first-spawn-set-success: "%prefix% &aFirst-join and respawn point successfully set to your current location!"
+  spawn-deleted-success: "%prefix% &aSpawn point successfully removed!"
+  first-spawn-deleted-success: "%prefix% &aFirst-join and respawn point successfully removed!"
+
+  # ----------------------------------------------------------------------------
+  # 🚨 PLAYER REPORT SYSTEM MESSAGES
+  # ----------------------------------------------------------------------------
+  report-usage: "%prefix% &cUsage: &#1BA1FF/report or /rapor <player> <reason>"
+  report-self: "%prefix% &cYou cannot report yourself!"
+  report-success: "%prefix% &7Report &asuccessfully &7submitted to staff."
+  report-cooldown-warning: "%prefix% &7Please wait &a%remaining% &7seconds before submitting another report!"
+  report-staff-notification: "&8[&cReport&8] &#1BA1FF{reporter} &f-> &#FF3333{reported}&f: &e{reason}"
+
+  # ----------------------------------------------------------------------------
+  # 🛡️ SECURITY & VERIFICATION (2FA) MESSAGES
+  # ----------------------------------------------------------------------------
+  verification-required: "%prefix% &7You are currently in verification. Please enter the &ccode &7sent via Discord. &8(&c%remaining_attempts% Attempts&8)"
+  verification-reminder: "%prefix% &7You are currently in verification. Please enter the &ccode &7sent via Discord. &8(&c%remaining_attempts% Attempts &8| &a%seconds%s&8)"
+  verification-not-needed: "%prefix% &aYou do not have pending login verification or you are already verified."
+  verification-usage: "%prefix% &cUsage: &#1BA1FF/verify <code>"
+  verification-success: "%prefix% &7Verification &aSuccessfully &7Passed!"
+  verification-failed: "%prefix% &cInvalid Code! Remaining attempts: &c%remaining_attempts%&8/&a%max_attempts%"
+  verification-bossbar: "&#FF0000🛡 Verification Time: &a%seconds%s &8| &7Attempts Left: &c%remaining_attempts%&8/&a%max_attempts%"
+  verification-title: "&#1B4FFFVerification"
+  verification-subtitle: "&7Please enter Discord code: &#1BA1FF/verify <code> &8(&c%remaining_attempts% Attempts&8)"
+  verification-wrong-title: "&#FF0000Wrong Code!"
+  verification-wrong-subtitle: "&cRemaining attempts: &c%remaining_attempts%&8/&a%max_attempts%"
+  verification-success-title: "&#00FF00Verified"
+  verification-success-subtitle: "&aLogin successfully approved. Have fun!"
+  verification-timeout-kick: "&#FF0000Verification Timed Out\n&7You did not enter the code in time.\n&fPlease check Discord and reconnect."
+  verification-max-attempts-kick: "&#FF0000Too Many Failed Attempts!\n&7You exceeded the maximum verification attempts.\n&fPlease check Discord and reconnect."
+
+  # ----------------------------------------------------------------------------
+  # 🗑️ TRASH BIN MESSAGES
+  # ----------------------------------------------------------------------------
+  trash-opened: "%prefix% &aTrash bin opened. Items placed inside will be deleted!"
+
+  # ----------------------------------------------------------------------------
+  # ⚖️ TRADE SYSTEM MESSAGES
+  # ----------------------------------------------------------------------------
+  trade-start: "%prefix% &7You are now typing a &#1B4FFFtrade &7message, type &c\"cancel\" &7to abort."
+  trade-cancel: "%prefix% &7Your trade message request was &ccancelled."
+  trade-cooldown-msg: "%prefix% &7You must wait &c%remaining% &7seconds before posting another trade."
+  trade-global-cooldown-msg: "%prefix% &7Another player recently posted a trade! Please wait &c%remaining% &7seconds."
+  trade-success: "%prefix% &aTrade message successfully sent!"
+  trade-max-one: "%prefix% &cYou can only have 1 active trade message."
+  trade-slot-taken: "%prefix% &cThis trade slot is taken."
+  trade-expired: "%prefix% &cYour trade message has expired."
+  trade-toggle-on: "%prefix% &aTrade notifications successfully enabled."
+  trade-toggle-off: "%prefix% &cTrade notifications disabled."
+  trade-disabled-self: "%prefix% &cYour trade mode is disabled! To open the menu and trade, type &#1BA1FF/trade on&c."
+  trade-too-short: "%prefix% &7Trade message is too short! Must be at least &c%min% &7characters."
+  trade-too-long: "%prefix% &7Trade message is too long! Must be at most &c%max% &7characters."
+  
+  # In-Game Chat Trade Announcement Format
+  trade-broadcast: |
+    &8________________________________________
+    &7
+    &#1B4FFF&lTrade Announcement
+    &7
+    &#1B4FFF%player% &7Is Trading! &7/trade %player%
+    &7
+    &#1B4FFFMessage: &7%message%
+    &8________________________________________
+
+# ==============================================================================
+# 🗑️ TRASH BIN SETTINGS
+# ==============================================================================
+trash-system:
+  title: "&8Trash Bin"
+
+# ==============================================================================
+# 📦 PLAYER VAULT (PV) TEXTS & ITEMS
+# ==============================================================================
+pv-system:
+  selection-menu-title: "&8Your Vaults"
+  vault-menu-title: "&8Vault #%vault_no%"
+  admin-selection-menu-title: "&8%player% - Vaults"
+  admin-vault-menu-title: "&8%player% - Vault #%vault_no%"
+
+  unlocked-item:
+    name: "&7Vault &a#%vault_no%"
+    lore:
+      - "&7• A private personal vault"
+      - "&7• where you can store items."
+      - ""
+      - "&#00FF00Click to open."
+
+  locked-item:
+    name: "&7Vault &#ff0000(Locked)"
+    lore:
+      - "&7• A private personal vault"
+      - "&7• where you can store items."
+      - ""
+      - "&#ff0000VIP required to open"
+
+# ==============================================================================
+# ⚖️ TRADE VISUAL & GUI SETTINGS
+# ==============================================================================
+trade-visuals:
+  menu-title: "&8Trade Menu"
+  head-title: "&#1BA1FF%player% &7Is Trading &#1B4FFF/trade"
+  title: ""
+  subtitle: "&#1BA1FF%player% &7Is Trading &#1B4FFF/trade"
+  bossbar-text: "&#1BA1FF%owner% &7Is Trading! &#1B4FFF/trade"
+  trade-lore:
+    - "&8"
+    - "&#1B4FFFMessage: &#1BA1FF%message%"
+    - ""
+    - "&7Time Left: &#1BA1FF%remaining_time%"
+  empty-slot-title: "&#1BA1FFAdd Listing"
+  empty-slot-lore:
+    - "&7Click here to create"
+    - "&7a new trade listing."
+    - ""
+    - "&#00FF00Click to Add Listing."
+  border-title: " "
+  border-lore: []
+
+# ==============================================================================
+# 📍 SPAWN TITLE & TELEPORT MESSAGES
+# ==============================================================================
+spawn-title-settings:
+  title-moving: "&#1B4FFFDo Not Move!"
+  subtitle-teleporting: "&7Please wait &c%remaining_seconds% &7seconds"
+
+teleport-messages:
+  teleport-cancelled: "%prefix% &7Teleportation &#ff0000Cancelled &7because you moved&f!"
+  teleport-success: "%prefix% &7Teleportation &#00FF00Successful"
+
+# ==============================================================================
+# 👮 STAFF PLAYTIME & ACTIVITY MESSAGES
+# ==============================================================================
+staff-messages:
+  header: "&#1B4FFF--- &#1BA1FF{status} Status &#1B4FFF---"
+  list-format: "&#1BA1FF{rank}. &#1ba1ff{staff}: &F{time} {status}"
+  passed-icon: "&#00FF00✔"
+  failed-icon: "&#ff0000✘"
+  admin-no-permission: "&cYou do not have permission to use this admin command!"
+  no-permission: "&cYou cannot do this"
+  log-preparing: "&#1BA1FFPreparing and sending Discord report..."
+  log-success: "&#00FF00Discord report sent successfully!"
+
+# ==============================================================================
+# 💬 STAFF CHAT FORMAT
+# ==============================================================================
+staff-chat:
+  format: "&#1B4FFFS&#1B58FFt&#1B61FFa&#1B6AFFf&#1B73FFf &#1B7DFFC&#1B86FFh&#1B8FFFa&#1B8FFFt&8: &#1BA1FF{player} &8» &f{message}"
+  console-log-format: "[StaffChat] {player}: {message}"
+  toggle-on: "%prefix% &aStaff chat mode enabled. Your messages will now be sent to staff chat."
+  toggle-off: "%prefix% &cStaff chat mode disabled. You are now speaking in global chat."
+
+# ==============================================================================
+# 🚨 REPORT DISCORD EMBED SETTINGS
+# ==============================================================================
+report-log-settings:
+  title: "🚨 New Player Report"
+  footer: "VeraxCore • Report System"
+
+# ==============================================================================
+# 📢 ANNOUNCEMENT TITLE SETTINGS
+# ==============================================================================
+announcement-settings:
+  static-title: "&eAnnouncement"
+
+# ==============================================================================
+# ⏳ TIME FORMAT LABELS
+# ==============================================================================
+time-format:
+  day: " Days"
+  hour: " Hours"
+  minute: " Minutes"
+  second: " Seconds"
+  zero: " 0 Minutes"
+
+# ==============================================================================
+# 📅 PERIOD TYPE KEYWORDS
+# ==============================================================================
+period-types:
+  daily: "daily"
+  weekly: "weekly"
+  monthly: "monthly"
+  total: "total"
+
+# ==============================================================================
+# 🔧 MAINTENANCE MODE SETTINGS
+# ==============================================================================
+maintenance:
+  usage: "%prefix% &cUsage: &#1BA1FF/maintenance <on/off | start <duration>>"
+  start-usage: "%prefix% &cUsage: &#1BA1FF/maintenance start <30m | 1h | 45s>"
+  invalid-time: "%prefix% &cInvalid duration entered! Example: &#1BA1FF30m&c, &#1BA1FF1h&c, &#1BA1FF45s"
+  already-active: "%prefix% &cMaintenance mode is already active!"
+  already-disabled: "%prefix% &cMaintenance mode is already disabled!"
+  enabled-success: "%prefix% &aMaintenance mode &#00FF00activated&a! Non-whitelisted players were kicked."
+  disabled-success: "%prefix% &aMaintenance mode &cdisabled &aand countdown cancelled."
+  countdown-started: "%prefix% &aServer will enter maintenance in &#1BA1FF%time%&a. Countdown BossBar started!"
+  broadcast-started: "%prefix% &cServer is now entering maintenance mode! Have a nice day."
+  bossbar-text: "&#FF3333&lMAINTENANCE MODE &8» &fServer entering maintenance in &#FF3333%remaining_time%&f!"
+  active-bossbar-text: "&#FF3333&lMAINTENANCE MODE &8» &fElapsed Time: &#FF3333%elapsed_time%"
+  motd-line-1: "&#1B4FFFV&#1B58FFe&#1B61FFr&#1B6AFFa&#1B73FFx&#1B7DFFC&#1B86FFo&#1B98FFr&#1BA1FFe &8» &#FF3333&lMAINTENANCE MODE"
+  motd-line-2: "&7Our server is currently under maintenance. &8(&c/discord&8)"
+  kick-screen: |
+    &8__________________________________________________
+    
+    &#1B4FFFV&#1B58FFe&#1B61FFr&#1B6AFFa&#1B73FFx&#1B7DFFC&#1B86FFo&#1B98FFr&#1BA1FFe
+    &#FF3333&lServer Under Maintenance
+    
+    &7Our server has been taken into &cmaintenance mode
+    &7to provide you with a smoother gameplay experience.
+    
+    &#1BA1FF✦ &fFor updates and reopening announcements:
+    &#1BA1FFDiscord: &fdiscord.gg/yourdiscord
+    &8__________________________________________________
+
+# ==============================================================================
+# 🔄 AUTOMATIC SERVER RESTART (AUTO RESTART) SETTINGS
+# ==============================================================================
+auto-restart:
+  bossbar-text: "&#FFAA00&lRESTART &8» &fServer restarting in &#FFAA00%remaining_time%&f!"

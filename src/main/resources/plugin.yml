@@ -1,0 +1,51 @@
+name: VeraxCore
+version: '${project.version}'
+main: com.verax.veraxcore.VeraxCore
+api-version: 1.16
+author: VeraxDev
+website: https://www.spigotmc.org/resources/138126/
+description: "All-in-one advanced management, security, and utility core plugin."
+softdepend: [LuckPerms, Essentials, PlaceholderAPI]
+
+commands:
+  veraxcore:
+    description: Main administrative command of VeraxCore.
+    aliases: [vc]
+  rapor:
+    description: Player reporting command and management.
+    aliases: [report]
+  yetkilisüre:
+    description: Displays and tracks staff activity playtime.
+    aliases: [admintime]
+  ys:
+    description: Staff chat communication command.
+    aliases: [sc, staffchat]
+  sohbet:
+    description: Chat control system (lock, clear, unmute).
+    aliases: [chat]
+  duyuru:
+    description: Broadcasts a title announcement to players.
+    aliases: [announcement]
+  spawn:
+    description: Teleports to spawn or manages spawn points.
+  ticaret:
+    description: Trade broadcast announcement and management menu.
+    aliases: [trade]
+  doğrula:
+    description: Staff two-step security verification.
+    aliases: [verify]
+  çöp:
+    description: Opens a temporary disposal trash bin.
+    aliases: [trash]
+  pv:
+    description: Opens private player storage vaults.
+    aliases: [vault, playervault]
+  pvadmin:
+    description: Administrative player vault management.
+    aliases: [pva, vaultadmin]
+  otoduyuru:
+    description: Toggles automatic chat announcements.
+    aliases: [autoannouncement]
+  bakım:
+    description: Server maintenance mode management.
+    aliases: [maintenance]
